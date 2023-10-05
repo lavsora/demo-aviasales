@@ -7,9 +7,7 @@ import Tabs from '../Tabs'
 import styles from './App.module.scss'
 
 const App = () => {
-  const [onlineStatus, setOnlineStatus] = useState(
-    navigator.onLine ? 'Онлайн' : 'Офлайн',
-  )
+  const [onlineStatus, setOnlineStatus] = useState(navigator.onLine ? 'Онлайн' : 'Офлайн')
 
   useEffect(() => {
     const handleOnlineStatusChange = () => {
@@ -36,8 +34,7 @@ const App = () => {
           color: 'red',
         }}
       >
-        Ошибка: Не возможно получить данные, отсутствует подключение к
-        интернету!
+        Ошибка: Не возможно получить данные, отсутствует подключение к интернету!
       </h2>
     )
   }
