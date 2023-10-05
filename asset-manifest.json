@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.aa75f8f1.css",
+    "main.js": "/static/js/main.b48c6e78.js",
+    "static/media/OpenSans-SemiBold.ttf": "/static/media/OpenSans-SemiBold.55174aa1f4f5a88ec5eb.ttf",
+    "static/media/OpenSans-Regular.ttf": "/static/media/OpenSans-Regular.1c0a329c683d91fc91aa.ttf",
+    "static/media/Logo.svg": "/static/media/Logo.f0ed2cc58a0c2e30ca8c8d4a0b0e77bb.svg",
+    "index.html": "/index.html",
+    "static/media/Shape.svg": "/static/media/Shape.b3ce3c21e1b482d2d37a.svg",
+    "static/media/Form.svg": "/static/media/Form.3d4aef0ee25bf206b12b.svg",
+    "main.aa75f8f1.css.map": "/static/css/main.aa75f8f1.css.map",
+    "main.b48c6e78.js.map": "/static/js/main.b48c6e78.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa75f8f1.css",
+    "static/js/main.b48c6e78.js"
+  ]
+}
