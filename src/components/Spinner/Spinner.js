@@ -1,7 +1,7 @@
 import './Spinner.scss'
 
 const Spinner = () => (
-  <div className='cs-loader-inner'>
+  <div className="cs-loader-inner">
     <label>●</label>
     <label>●</label>
     <label>●</label>

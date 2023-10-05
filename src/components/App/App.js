@@ -38,6 +38,7 @@ const App = () => {
       </h2>
     )
   }
+
   return (
     <main className={styles.main}>
       <div className={styles.wrapper}>

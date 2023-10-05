@@ -11,7 +11,7 @@ const Filter = () => {
   const filterCheckbox = filtersCheckbox.map((item) => (
     <label key={item.id} className={styles.ticketFiltersName}>
       <input
-        type='checkbox'
+        type="checkbox"
         className={styles.checkbox}
         checked={item.checked}
         onChange={() => dispatch(checkboxConfig(item.id))}
@@ -24,7 +24,7 @@ const Filter = () => {
   return (
     <div className={styles.ticketFilters}>
       <span className={styles.ticketFiltersTitle}>Количество пересадок</span>
-      { filterCheckbox }
+      {filterCheckbox}
     </div>
   )
 }

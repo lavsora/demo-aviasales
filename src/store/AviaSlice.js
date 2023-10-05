@@ -24,17 +24,14 @@ const initialState = {
   count: 5,
 }
 
-export const fetchAvia = createAsyncThunk(
-  'aviaSales/fetchAvia',
-  async (_, { rejectWithValue }) => {
-    try {
-      const body = await AviaService()
-      return body
-    } catch (error) {
-      return rejectWithValue(error.message)
-    }
-  },
-)
+export const fetchAvia = createAsyncThunk('aviaSales/fetchAvia', async (_, { rejectWithValue }) => {
+  try {
+    const body = await AviaService()
+    return body
+  } catch (error) {
+    return rejectWithValue(error.message)
+  }
+})
 
 export const AviaSlice = createSlice({
   name: 'aviaSales',
@@ -52,17 +49,11 @@ export const AviaSlice = createSlice({
         }))
       }
 
-      const updatedFilters = state.filters.map((el) =>
-        el.id === checkboxId ? { ...el, checked: !el.checked } : el,
-      )
+      const updatedFilters = state.filters.map((el) => (el.id === checkboxId ? { ...el, checked: !el.checked } : el))
 
-      const allFiltersChecked = updatedFilters
-        .slice(1)
-        .every((filter) => filter.checked)
+      const allFiltersChecked = updatedFilters.slice(1).every((filter) => filter.checked)
 
-      state.filters = updatedFilters.map((el) =>
-        el.id === 0 ? { ...el, checked: allFiltersChecked } : el,
-      )
+      state.filters = updatedFilters.map((el) => (el.id === 0 ? { ...el, checked: allFiltersChecked } : el))
     },
 
     buttonConfig: (state, action) => {
@@ -79,9 +70,7 @@ export const AviaSlice = createSlice({
       } else if (buttonId === 1) {
         state.sortedByPrice = false
         state.sortedBySpeed = true
-        state.tickets.sort(
-          (a, b) => a.segments[0].duration - b.segments[0].duration,
-        )
+        state.tickets.sort((a, b) => a.segments[0].duration - b.segments[0].duration)
       }
     },
     showTickets: (state) => {
@@ -112,9 +101,7 @@ export const AviaSlice = createSlice({
           state.tickets.sort((a, b) => a.price - b.price)
         }
         if (state.sortedBySpeed) {
-          state.tickets.sort(
-            (a, b) => a.segments[0].duration - b.segments[0].duration,
-          )
+          state.tickets.sort((a, b) => a.segments[0].duration - b.segments[0].duration)
         }
       })
       .addCase(fetchAvia.rejected, (state, action) => {

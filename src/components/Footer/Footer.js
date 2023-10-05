@@ -14,8 +14,8 @@ const Footer = () => {
   if (showButton.length > 5 && notChecked) {
     return (
       <button
-        type='button'
-        aria-label='show ticket'
+        type="button"
+        aria-label="show ticket"
         className={styles.showButton}
         onClick={() => dispatch(showTickets())}
       >

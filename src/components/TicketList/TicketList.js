@@ -36,11 +36,8 @@ const TicketList = () => {
         ticket.segments.every((seg) => {
           const listTrans = checkedBoxes.map((box) => box.transfers)
 
-          return (
-            listTrans.find((filter) => filter === seg.stops.length) !==
-            undefined
-          )
-        }),
+          return listTrans.find((filter) => filter === seg.stops.length) !== undefined
+        })
       )
     }
 
@@ -58,15 +55,13 @@ const TicketList = () => {
       <div className={styles.ticket}>
         {!newFilteredTickets.length ? (
           <Alert
-            message='Важная информация'
-            description='Рейсов, подходящих под заданные фильтры, не найдено.'
-            type='info'
+            message="Важная информация"
+            description="Рейсов, подходящих под заданные фильтры, не найдено."
+            type="info"
             showIcon
           />
         ) : (
-          newFilteredTickets.map((ticket) => (
-            <Ticket key={ticket.id} ticket={ticket} />
-          ))
+          newFilteredTickets.map((ticket) => <Ticket key={ticket.id} ticket={ticket} />)
         )}
       </div>
     </>

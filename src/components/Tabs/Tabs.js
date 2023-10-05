@@ -13,10 +13,8 @@ const TicketTabs = () => {
   const button = buttons.map((item) => (
     <button
       key={item.id}
-      type='button'
-      className={`${styles.tabsActive} ${
-        item.active ? styles.active : ''
-      }`}
+      type="button"
+      className={`${styles.tabsActive} ${item.active ? styles.active : ''}`}
       onClick={() => dispatch(buttonConfig(item.id))}
       disabled={item.disabled}
     >
@@ -26,9 +24,7 @@ const TicketTabs = () => {
 
   return (
     <div className={styles.ticketDisplay}>
-      <div className={styles.tabs}>
-        { button }
-      </div>
+      <div className={styles.tabs}>{button}</div>
       <TicketList />
       <Footer />
     </div>

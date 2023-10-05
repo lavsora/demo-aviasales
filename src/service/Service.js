@@ -4,7 +4,7 @@ let id = null
 export const Service = async () => {
   if (id === null) {
     const response = await fetch(`${url}search`)
-    
+
     if (response.ok) {
       const body = await response.json()
       id = body.searchId

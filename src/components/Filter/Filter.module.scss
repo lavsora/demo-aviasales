@@ -1,64 +1,64 @@
 .ticketFilters {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    flex-basis: 20%;
-    height: 100%;
-    row-gap: 20px;
-    background: #ffffff;
-    border-radius: 5px;
-    margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  flex-basis: 20%;
+  height: 100%;
+  row-gap: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  margin-right: 10px;
 
-    &Title {
-        font-family: 'Open Sans SemiBold', sans-serif;
-        font-size: 13px;
-    }
+  &Title {
+    font-family: 'Open Sans SemiBold', sans-serif;
+    font-size: 13px;
+  }
 
-    &Name {
-        font-family: 'Open Sans Regular', sans-serif;
-        font-size: 13px;
-        padding-left: 25px;
-        cursor: pointer;
-    }
+  &Name {
+    font-family: 'Open Sans Regular', sans-serif;
+    font-size: 13px;
+    padding-left: 25px;
+    cursor: pointer;
+  }
 }
 
 .checkbox {
-    position: absolute;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .fakeCheckbox {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    margin-left: -25px;
-    background-image: url('../../img/Form.svg');
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: -25px;
+  background-image: url('../../img/Form.svg');
 }
 
 .fakeCheckbox::before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    background-image: url('../../img/Shape.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 14px 14px;
-    opacity: 0;
-    transition: 0.2s;
+  content: '';
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('../../img/Shape.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
+  opacity: 0;
+  transition: 0.2s;
 }
 
-.checkbox:checked+.fakeCheckbox::before {
-    opacity: 1;
+.checkbox:checked + .fakeCheckbox::before {
+  opacity: 1;
 }
 
-.checkbox:focus+.fakeCheckbox::before {
-    border: 1px solid #2196f3;
-    border-radius: 3px;
+.checkbox:focus + .fakeCheckbox::before {
+  border: 1px solid #2196f3;
+  border-radius: 3px;
 }

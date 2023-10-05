@@ -1,49 +1,49 @@
 .ticketDisplay {
-    flex-basis: 65%;
-    flex-grow: 1;
+  flex-basis: 65%;
+  flex-grow: 1;
 }
 
 .tabs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #ffffff;
+  height: 50px;
+  border-radius: 5px;
+
+  &Active {
+    padding: 15px;
+    font-family: OpenSans-SemiBold, sans-serif;
+    font-size: 12px;
+    flex: 1 1 auto;
+    text-align: center;
     display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background: #ffffff;
-    height: 50px;
-    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: #ffffff;
+    border: none;
 
-    &Active {
-        padding: 15px;
-        font-family: OpenSans-SemiBold, sans-serif;
-        font-size: 12px;
-        flex: 1 1 auto;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: 0.4s;
-        background-color: #ffffff;
-        border: none;
-
-        &.active {
-            background: #2196f3;
-            color: #ffffff;
-        }
+    &.active {
+      background: #2196f3;
+      color: #ffffff;
     }
+  }
 
-    &Active:first-child {
-        border-right: 1px solid #dfe5ec;
-        border-radius: 5px 0 0 5px;
-    }
+  &Active:first-child {
+    border-right: 1px solid #dfe5ec;
+    border-radius: 5px 0 0 5px;
+  }
 
-    &Active:hover {
-        background: #2196f3;
-        color: #ffffff;
-    }
+  &Active:hover {
+    background: #2196f3;
+    color: #ffffff;
+  }
 
-    &Active:last-child {
-        border-left: 1px solid #dfe5ec;
-        border-radius: 0 5px 5px 0;
-    }
+  &Active:last-child {
+    border-left: 1px solid #dfe5ec;
+    border-radius: 0 5px 5px 0;
+  }
 }
