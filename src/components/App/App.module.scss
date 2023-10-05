@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  background: #f3f7fa;
+}
+.wrapper {
+  max-width: 754px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Open Sans Regular';
+  src:
+    local('Open Sans Regular'),
+    url('./fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans Semibold';
+  src:
+    local('Open Sans Semibold'),
+    url('./fonts/OpenSans-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
